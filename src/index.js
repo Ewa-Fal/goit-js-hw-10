@@ -24,7 +24,6 @@ function addList(items) {
   breedSelect.innerHTML = markup;
 }
 
-//creating post on website with cat name, image and descripion
 function addPost(item) {
   const markup = `
   <img class="postImage" src="${item.url}" alt="">

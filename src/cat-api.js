@@ -1,5 +1,3 @@
-const API_KEY =
-  'api_key=live_76s8luD6dpYjHegYPdiaCufYa2cJNlNKoeAyGpamV3o5ODaRXJcxDW2QOQMpXcQb';
 import axios from 'axios';
 
 let axiosCatApi = null;
