@@ -5,11 +5,11 @@ import Notiflix from 'notiflix';
 
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
-const loader = document.querySelector('.loader');
+const loader = document.querySelector('.loaderBox');
 const error = document.querySelector('.error');
 
 const apiKey =
-'live_76s8luD6dpYjHegYPdiaCufYa2cJNlNKoeAyGpamV3o5ODaRXJcxDW2QOQMpXcQb';
+  'live_76s8luD6dpYjHegYPdiaCufYa2cJNlNKoeAyGpamV3o5ODaRXJcxDW2QOQMpXcQb';
 
 breedSelect.addEventListener('change', handleChange);
 breedSelect.classList.add('hidden');
@@ -26,7 +26,7 @@ function addList(items) {
 
 function addPost(item) {
   const markup = `
-  <img class="postImage" src="${item.url}" alt="">
+  <img class="breedsImage" src="${item.url}" alt="">
   <div>
     <h1>${item.breeds[0].name}</h1>
     <p>${item.breeds[0].description}</p>

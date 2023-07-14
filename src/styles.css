@@ -4,52 +4,50 @@ body {
   margin: 40px 80px;
   background-color: rgba(108, 108, 105, 0.349);
   color: rgb(66, 66, 64);
+  text-align: center;
 }
-
+h2 {
+  font-family: cursive;
+  color: rgb(93, 100, 21);
+}
 .hidden {
   display: none;
 }
 
-.postImage {
+.breedsImage {
   max-width: 400px;
   max-height: 400px;
   margin: 30px auto;
   display: block;
 }
 .loader {
-  font-style: italic;
-  text-align: center;
-}
-
-.loaderIcon {
   width: 48px;
-  height: 40px;
+  height: 48px;
+  border-radius: 50%;
   display: inline-block;
-  position: relative;
-  background: #fff;
-  border-radius: 15% 15% 35% 35%;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
-.loaderIcon::after {
-  content: '';
+.loader::after {
+  content: '';  
   box-sizing: border-box;
   position: absolute;
-  left: 45px;
-  top: 8px;
-  border: 4px solid #3f3f38;
-  width: 16px;
-  height: 20px;
-  border-radius: 0 4px 4px 0;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
 }
-.loaderIcon::before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 10px;
-  color: #3f3f38;
-  top: -15px;
-  left: 11px;
-  box-sizing: border-box;
-  animation: animloader 1s ease infinite;
-}
-
-
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
